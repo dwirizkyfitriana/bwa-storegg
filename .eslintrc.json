@@ -25,6 +25,7 @@
     ],
     "rules": {
         "react/jsx-filename-extension": [1, {"extension": [".js", ".jsx", ".ts", ".tsx"]}],
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "jsx-a11y/anchor-is-valid": "off"
     }
 }
