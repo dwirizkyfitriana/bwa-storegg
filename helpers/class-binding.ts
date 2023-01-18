@@ -1,4 +1,4 @@
-export const classes = (dynamic: Object, classes = '') => {
+export const classes = (dynamic: object, classes = '') => {
     return Object.entries(dynamic)
         .filter(entry => entry[1])
         .map(entry => entry[0])
