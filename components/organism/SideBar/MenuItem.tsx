@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Link from 'next/link'
 import { classes } from '../../../helpers/class-binding'
 
 interface MenuItemProps {
@@ -12,10 +12,11 @@ interface MenuItemProps {
         | 'ic-menu-settings'
         | 'ic-menu-logout'
     active?: boolean
+    href: string
 }
 
 export default function MenuItem(props: Partial<MenuItemProps>) {
-    const { title, icon, active } = props
+    const { title, icon, active, href } = props
     return (
         <div className={classes({ active }, 'item mb-30')}>
             <img
@@ -25,9 +26,11 @@ export default function MenuItem(props: Partial<MenuItemProps>) {
                 height={25}
             />
             <p className='item-title m-0'>
-                <a href='' className='text-lg text-decoration-none'>
-                    {title}
-                </a>
+                <Link href={href}>
+                    <a className='text-lg text-decoration-none'>
+                        {title}
+                    </a>
+                </Link>
             </p>
         </div>
     )
